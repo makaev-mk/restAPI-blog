@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('home', [\App\Http\Controllers\Api\V1\ArticlesController::class, 'index']);
-Route::get('articles', [\App\Http\Controllers\Api\V1\ArticlesController::class, 'index']);
+Route::get('articles', [\App\Http\Controllers\Api\V1\ArticlesController::class, 'listing']);
 Route::get('articles/{id}', [\App\Http\Controllers\Api\V1\ArticlesController::class, 'show']);
 Route::get('tags', [\App\Http\Controllers\Api\V1\ArticleTagController::class, 'index']);
 Route::post('add-like', [\App\Http\Controllers\Api\V1\ArticlesController::class, 'addLike']);
